@@ -3,9 +3,10 @@
     <head>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script>
             var cur = 0;
             var slideIndex = 0;
@@ -125,7 +126,7 @@
 
         <div class="contact">
             <div class="column_left_1">     
-                <span>📍 4459 Hillview Street, Columbia &nbsp; &nbsp; 📱 1-803-783-3363</span>
+                <span>📍 4459 Hillview Street, Columbia &nbsp; &nbsp;</span><span>  1-803-783-3363</span>
             </div>
 
             <div class="column_right_1">
@@ -139,13 +140,13 @@
             </div>
 
             <div class="column_right_2">
-                <span> Services Pages Blog Shop 🔍</span>
+                <span><a href="">Services</a> <a href="">Pages</a> <a href = "">Blog</a> <a href="">Shop</a> 🔍</span>
                 <a class="top_link">📈 Free SEO analysis</a>
             </div>
             <div style="clear:both;"></div>    
         </div>
 
-        <div class="banner">
+        <div class="banner slide_col">
             <input type="image" src="left.png" id="left" class="left_img" onclick="left_click()"/>
             <div id="slideshow" class="slides" onmouseover="pause()" onmouseout="resume()">
                 <img src="monitor1.png" class="slide1" data-time="3000" data-effect="fade" /> <! -- choose time and effects from: fade, bounce, pulse and flash. -->
@@ -153,6 +154,7 @@
                 <img src="file-slider-1.png" class="slide3" data-time="3000" data-effect="fade"/>
             </div>
             <input type="image" src="right.svg" id="right" class="right_img" onclick="right_click()"/>
+            <div style="clear:both;"></div>
         </div>
 
         <div class="info">
@@ -207,7 +209,7 @@
             </form>
         </div>
         <div class="computer">
-            <img src="target-audience-img.png" style="width: 500px; margin-right: 100px; float:left">
+            <img src="target-audience-img.png" >
             <article><h1>Target Audience</h1><br>
                 We then optimize your online presence and website to lead them.
             </article>
@@ -225,7 +227,7 @@
 
         <div class="different">
             <h1>What makes us different</h1>
-            <span>We are an experience agency company. We have many year work in web design and wordpress.</span><br>
+            <article>We are an experience agency company. We have many year work in web design and wordpress.</article><br>
             <div class="diff_box" >
                 <img src="service-icon-startup.png" class="diff_img">
                 <button class="diff_butt" style="background-color: rgb(72, 172, 235)">Code optimisation</button>
@@ -246,7 +248,7 @@
                 <button class="diff_butt" style="background-color: rgb(7, 173, 63)">Code optimisation</button>
             </div>
             <h1>Our Other Awesome Core Features</h1>
-            <span>Give Your Business The Success It Deserves</span><br/>
+            <article>Give Your Business The Success It Deserves</article><br/>
 
             <div class="diff_columns">
                 <h1>Local Search Optimization</h1>
@@ -304,7 +306,7 @@
                 </ul>
             </div>
 
-            <div class="column_left_3">
+            <div class="column_left_3 final_display">
                 <p style="padding: 25px 10px 25px 0px; font-size: 20px">Services</p>
                 <ul style="line-height: 30px">
                     <li><a href="" style="color: whitesmoke">Paid Search Advertising</a></li>
@@ -321,7 +323,7 @@
                 </ul>
             </div>
 
-            <div class="column_left_3" style="width: 500px; float: right; margin-right: 0px">
+            <div class="column_left_3 final_display" style="width: 500px; float: right; margin-right: 0px">
                 <p style="padding: 25px 10px 10px 0px; font-size: 20px">Get a free quote</p>
                 <span>Our team is ready to review your website’s SEO aspects and provide some tips to help you increase traffic.</span>
                 <input type="text" class="sur" placeholder="Name*"/>
