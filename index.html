@@ -20,6 +20,22 @@
         <script>
             var cur = 0;
             var slideIndex = 0;
+            jQuery(window).scroll(function(){
+            // get the bottom position
+            var bottom_position = $(document).height() - ($(window).scrollTop() + $(window).height());
+            var scroll_data = {
+                    action: 'user_scroll',
+                    container_id: container_id
+                };      
+            $.ajax({
+                    url: wdm_url,
+                    data: scroll_data,
+                    context: document.body
+                }).done(function(response) {
+                        // do stuff here
+                    });     
+            });
+            
             function right_click(){
                 pause();
                 var obj = document.getElementById('slideshow').children;
@@ -120,6 +136,7 @@
             window.onscroll = stick;  
         </script> 
     </head>
+
     <body>
     <div style="background-color: rgba(3, 99, 189, 0.685);">
     <div class="container">
@@ -143,7 +160,7 @@
                     <div class="col-sm-4">
                         <img src="logo.svg" class="logo"/>
                     </div>
-                    <div class="col-sm-8 column_right_2" style="text-align: right">
+                    <div class="col-sm-8 d-none d-lg-block" style="text-align: right">
                         <span><a href="">Services</a> <a href="">Pages</a> <a href = "">Blog</a> <a href="">Shop</a> 🔍</span>
                         <a class="top_link">📈 Free SEO analysis</a>
                     </div>
@@ -213,20 +230,21 @@
                 </article>
                 </div>
 
-                <div class="col-lg-6" style="text-align: center">
-                <form class="form">
-                        <legend class="top">
-                            <br/>
-                            <h1 style="color: white; text-align: center">Free SEO Analysis</h1>
-                            <br/>
-                            <h3 style="color: white; text-align: center">It’s Free and always will be.</h3>
-                        </legend>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div style="margin-left: 40%">
+                    <form class="form">
+                    
+                        <div class="top">
+                            <h1 style="color: white; text-align: center; padding-top: 20px">Free SEO Analysis</h1>
+                            <h5 style="color: white; text-align: center; font-size: 15px">It’s Free and always will be.</h5>
+                        </div>
                         <input type="text" class="survey_box" placeholder="Full name*">
                         <input type="text" class="survey_box" placeholder="hello@goseowp.com">
                         <input type="text" class="survey_box" placeholder="Phone Number*">
                         <input type="text" class="survey_box" placeholder="Website*">
                         <input type="button" class="survey_box" value="Submit Your Response" style= "color: white; background-color: rgba(3, 99, 189, 0.685); border:rgba(3, 99, 189, 0.685)">
-                </form>
+                    </form>
+                </div>
                 </div>
             </div>
         </div>
@@ -352,8 +370,8 @@
     </div>
 
     <div style="background-color: rgb(48, 47, 47);">
-    <div class="container column_right_2">
-    <div class="ending ">
+    <div class="container d-none d-lg-block">
+    <div class="ending">
             <div class="row">
             <div class="col-lg-4">
                 <img src="nuovo-logo-light.svg" style="padding: 25px 10px 25px 10px">
@@ -368,19 +386,14 @@
                 </ul>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 list">
                 <p style="padding: 25px 10px 25px 0px; font-size: 20px">Services</p>
                 <ul style="line-height: 10px">
-                    <li><a href="" style="color: whitesmoke">Paid Search Advertising</a></li>
-                    <hr style="background-color: whitesmoke; width: 70%; float: left; margin-right: 60px; padding-right: 20px"/>            
-                    <li><a href="" style="color: whitesmoke">&nbsp; Social Media Marketing</a></li>
-                    <hr style="background-color: whitesmoke; width: 70%; float: left; margin-right: 60px; padding-right: 20px"/>   
+                    <li><a href="" style="color: whitesmoke">Paid Search Advertising</a></li>         
+                    <li><a href="" style="color: whitesmoke">Social Media Marketing</a></li>  
                     <li><a href="" style="color: whitesmoke">Email Marketing</a></li>
-                    <hr style="background-color: whitesmoke; width: 70%; float: left; margin-right: 60px; padding-right: 20px"/>  
                     <li><a href="" style="color: whitesmoke">Sitemaps & SEO</a></li>
-                    <hr style="background-color: whitesmoke; width: 70%; float: left; margin-right: 60px; padding-right: 20px"/>  
                     <li><a href="" style="color: whitesmoke">Target Strategy</a></li>
-                    <hr style="background-color: whitesmoke; width: 70%; float: left; margin-right: 60px; padding-right: 20px"/>  
                     <li><a href="" style="color: whitesmoke">Monitoring Ranking</a></li>
                 </ul>
             </div>
@@ -403,8 +416,12 @@
     <div class=container>
     <div class="bottom">
         <div class="row">
+            <div class="col-12 col-sm-6" style="text-align: right">
             <button onclick="go_up()" class="up">↑</button>
+            </div>
+            <div class="col-12 col-sm-6" style="text-align: right">
             <p>© Copyright 2018. All Rights Reserved</p>
+            </div>
         </div>
     </div>
     </div>

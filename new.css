@@ -1,6 +1,11 @@
+html{
+  scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none
-  }
+}
+
 a:hover{
 font-weight: bold
 }
@@ -52,6 +57,7 @@ font-weight: bold
     display: block;
     text-align: center
 }
+
 .slides{
     width: 300px;
     display: inline-block;
@@ -312,7 +318,8 @@ font-weight: bold
   position: fixed;
   padding-left: 20px;
   padding-right: 20px;
-  top: 0
+  top: 0;
+  z-index: 999;
 }
 
 .content {
@@ -355,7 +362,7 @@ font-weight: bold
   
   .form{
     margin-top: 30px;
-    height: 500px;
+    height: 450px;
     width: 350px; 
     border: 2px solid whitesmoke;
     color: white;
@@ -433,7 +440,7 @@ font-weight: bold
   }
   
   .diff_butt{
-    width: 270px;
+    width: 250px;
     height: 40px;
     color: white;
     border: none;
@@ -489,8 +496,7 @@ font-weight: bold
     border: grey 1px solid;
     background-color: rgb(32, 32, 32);
     color: grey;
-    margin-right: 20%;
-    margin-left: 42%;
+    /* margin-left: 60%; */
     font-size: 25px
   }
   
@@ -513,11 +519,22 @@ font-weight: bold
     text-align: right;
   }
  
-  @media only screen and (max-width: 800px){
+  .list li{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px whitesmoke solid;
+    margin-right: 30px;    
+  }
+
+  /* .alignment{
+    text-align: right; 
+  } */
+
+  /* @media only screen and (max-width: 800px){
     .column_right_2{
         display: none;
     }
-  }
+  } */
 
   @media only screen and (max-width: 500px){
     .computer img{
