@@ -17,6 +17,20 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+        <script src = "https://cdn.jsdelivr.net/npm/sourcebuster@1.1.0/dist/sourcebuster.min.js"></script>
+            <script>
+                function logSource(sbData) {
+                    alert(`Cookies are set! Your source is: ${sbData.current.src}`);
+                }
+
+                sbjs.init({ callback: logSource });
+
+            //         sbjs.init();
+            //         function write(){
+            //         document.write(sbjs.get.current.src);
+            //         }
+            // window.onload = write;
+            </script>
         <script>
             var cur = 0;
             var slideIndex = 0;
