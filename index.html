@@ -22,6 +22,8 @@
                 function logSource(sbData) {
                     sessionStorage.setItem('medium', sbjs.get.current.mdm);
                     sessionStorage.setItem('source', sbjs.get.current.src);
+                    sessionStorage.setItem('type', sbjs.get.current.typ);
+                    sessionStorage.setItem('keyword', sbjs.get.current.trm);
                 }
 
                 sbjs.init({ callback: logSource });
