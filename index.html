@@ -18,19 +18,17 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
         <script src = "https://cdn.jsdelivr.net/npm/sourcebuster@1.1.0/dist/sourcebuster.min.js"></script>
-            <script>
+        <script>
                 function logSource(sbData) {
-                    alert(`Cookies are set! Your medium is: ${sbData.current.mdm}`);
+                    sessionStorage('medium', sbData.mdm);
+                    sessionStorage('source', sbData.src);
                 }
 
                 sbjs.init({ callback: logSource });
+                
 
-            //         sbjs.init();
-            //         function write(){
-            //         document.write(sbjs.get.current.src);
-            //         }
-            // window.onload = write;
-            </script>
+        </script>
+
         <script>
             var cur = 0;
             var slideIndex = 0;
@@ -176,7 +174,7 @@
                     </div>
                     <div class="col-sm-8 d-none d-lg-block" style="text-align: right">
                         <span><a href="">Services</a> <a href="">Pages</a> <a href = "">Blog</a> <a href="">Shop</a> 🔍</span>
-                        <a class="top_link">📈 Free SEO analysis</a>
+                        <a href="https://zatch10.github.io./old" class="top_link">📈 Free SEO analysis</a>
                     </div>
                 </div> 
         </div>
