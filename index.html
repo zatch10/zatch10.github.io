@@ -20,8 +20,8 @@
         <script src = "https://cdn.jsdelivr.net/npm/sourcebuster@1.1.0/dist/sourcebuster.min.js"></script>
         <script>
                 function logSource(sbData) {
-                    sessionStorage.setItem('medium', sbData.mdm);
-                    sessionStorage.setItem('source', sbData.src);
+                    sessionStorage.setItem('medium', sbjs.get.current.mdm);
+                    sessionStorage.setItem('source', sbjs.get.current.src);
                 }
 
                 sbjs.init({ callback: logSource });
