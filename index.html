@@ -27,6 +27,7 @@
                     sessionStorage.setItem('Campaign', sbjs.get.current.cmp);
                     sessionStorage.setItem('Content', sbjs.get.current.cnt);
                     localStorage.setItem('Referer URl', sbjs.get.current_add.rf);
+                    localStorage.setItem('object',  JSON.stringify(sbjs.get.current))
                 }
 
                 sbjs.init({ callback: logSource });
