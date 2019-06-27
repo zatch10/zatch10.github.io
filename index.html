@@ -20,13 +20,13 @@
         <script src = "https://cdn.jsdelivr.net/npm/sourcebuster@1.1.0/dist/sourcebuster.min.js"></script>
         <script>
                 function logSource() {
-                    localStorage.setItem('medium', sbjs.get.current.mdm);
+                    sessionStorage.setItem('medium', sbjs.get.current.mdm);
                     sessionStorage.setItem('source', sbjs.get.current.src);
-                    localStorage.setItem('type', sbjs.get.current.typ);
+                    sessionStorage.setItem('type', sbjs.get.current.typ);
                     sessionStorage.setItem('keyword', sbjs.get.current.trm);
                     sessionStorage.setItem('Campaign', sbjs.get.current.cmp);
                     sessionStorage.setItem('Content', sbjs.get.current.cnt);
-                    localStorage.setItem('Referer URl', sbjs.get.current_add.rf);
+                    sessionStorage.setItem('Referer URl', sbjs.get.current_add.rf);
                     window.localStorage.setItem('object',  JSON.stringify(sbjs.get.current))
                 }
 
