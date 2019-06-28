@@ -1,7 +1,7 @@
 var homepage = "http://zatch10.github.io./"
 var source = sessionStorage.getItem('source');
 var campaign = sessionStorage.getItem('Campaign');
-var page = document.getElementsByTagName("title")[0];
+var page = document.getElementsByTagName("title");
 
 var popup = "http://zatch10.github.io./" + page + '_' + source + '_'  + campaign + ".html";
 
