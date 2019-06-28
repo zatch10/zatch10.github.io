@@ -1,15 +1,19 @@
+var homepage = "http://zatch10.github.io./"
 var source = sessionStorage.getItem('source');
 var campaign = sessionStorage.getItem('Campaign');
 var page = document.getElementsByTagName("title")[0];
 
-var popup = page + source + campaign + ".html";
+var popup = "http://zatch10.github.io./" + page + '_' + source + '_'  + campaign + ".html";
 
-$(function(){
-    $("#includedContent").load(popup); 
-  });
+// $(function(){
+//     $("#includedContent").load(popup); 
+//   });
+
+    popupWindow = window.open(
+		popup,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
 
 // // switch(source){
-// //     case "twitter": 
+// //     case "twitter":           
 // //         twitter(campaign);
 // //         break;
 
