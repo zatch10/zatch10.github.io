@@ -9,7 +9,7 @@ $(document).ready(function(){
     $('#content').load(popup);
  });
 
-function close{
+function close(){
     $("div").remove('#content')
 }
 
