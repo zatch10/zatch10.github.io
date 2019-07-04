@@ -10,6 +10,6 @@ $(document).ready(function(){
 
 // function close(){
 //     $("div").remove('#content')
-}
+//}
 
 
