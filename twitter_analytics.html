@@ -1,4 +1,9 @@
-<div style="background-color: black; width: 20%; height: 20%" id="blog_twitter_analytics, z-index: 100; ">
+<div style="background-color: black; width: 20%; height: 20%" id="blog_twitter_analytics, z-index: 999; ">
 <p style="color:whitesmoke">You came from twitter</p>
 <button style="width: 50%, background-color darkgrey" onclick="close()">click to close</button>
+<script>
+    $( "button" ).click(function() {
+      $( "div" ).remove("#blog_twitter_analytics");
+    });
+    </script>
 </div>

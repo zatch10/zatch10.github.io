@@ -8,10 +8,8 @@ $(document).ready(function(){
     $('#content').load(popup);
  });
 
-function close(){
-    $("div").remove('#content')
+// function close(){
+//     $("div").remove('#content')
 }
 
-// popupWindow = window.open(
-//     popup,'popUpWindow','height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
 
