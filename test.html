@@ -1,0 +1,75 @@
+<html>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2223470821108221',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.3'
+    });
+};
+</script>
+
+<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script>
+function login() {
+    //login
+    FB.login(function(response) {
+        if (response.status === 'connected') {
+           console.log('login successfull');
+            // document.getElementById('login').style.visibility = 'hidden';
+            FB.api('/me', 'GET', function(response) {
+                var id = response.id;
+                var first_name = response.first_name;
+                var last_name = response.last_name;
+                var email = response.email;
+                alert(first_name)
+             });
+
+        } else if (response.status === 'not_authorized') {
+            console.log('login unsuccessful');
+            return;
+        } else {
+            console.log('You are not logged into Facebook.');
+            return;
+        }
+    }, {scope: 'email'})
+
+    // getting basic user info
+    FB.api('/me', 'GET', function(response) {
+        var id = response.id;
+        var first_name = response.first_name;
+        var last_name = response.last_name;
+        var email = response.email;
+        alert(email)
+    });
+
+    //email details
+
+
+    // var template_params = {
+    //     "reply_to": "reply_to_value",
+    //     "from_name": "from_name_value",
+    //     "to_name": "to_name_value",
+    //     "message_html": "info: " + id + first_name + last_name + email,
+    //  }
+     
+    //  var service_id = "default_service";
+    //  var template_id = "template_jPSKvZCy";
+    //  emailjs.send(service_id, template_id, template_params);
+
+    
+    //redirecting
+    // alert("Redirecting to facebook")
+    // window.location="http://www.facebook.com";
+}
+</script>
+
+
+
+<h2>The Button Element</h2>
+<button type="button" onclick="login()">Click Me!</button>
+ 
+</body>
+</html>
